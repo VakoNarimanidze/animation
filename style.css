@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.background {
+  position: relative;
+  background: #00fdff url(road.jpg);
+  height: 100vh;
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animate 15s linear infinite;
+}
+.car {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  bottom: 20px;
+  animation: car-animate 15s linear infinite;
+  z-index: 10;
+}
+.reverse-car {
+  width: 270px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+  bottom: 145px;
+  animation: reverse-car 15s linear infinite;
+}
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes car-animate {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 1030px;
+  }
+}
+@keyframes reverse-car {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 1030px;
+  }
+}
