@@ -27,6 +27,92 @@ body {
   bottom: 145px;
   animation: reverse-car 15s linear infinite;
 }
+.up-left {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.cloud {
+  position: relative;
+  width: 170px;
+  height: 50px;
+  border-radius: 50px;
+  background: white;
+  animation: cloud-animate 8s linear infinite;
+  z-index: 10;
+}
+.cloud:before {
+  content: '';
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  background: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.cloud:after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 55px;
+  background: white;
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+}
+.sun {
+  position: absolute;
+  top: -75px;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  z-index: 4;
+  box-shadow: 0 0 15px rgba(255, 255, 8, 0.5);
+
+  animation: sun-animate 20s linear infinite;
+}
+.sun li {
+  content: '';
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-15%, -50%);
+  width: 140px;
+  height: 3px;
+  background: #ffe208;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 8, 0.5);
+}
+.sun li:nth-child(1) {
+  transform: translate(-15%, -50%) rotate(0deg);
+}
+.sun li:nth-child(2) {
+  transform: translate(-15%, -50%) rotate(90deg);
+}
+.sun li:nth-child(3) {
+  transform: translate(-15%, -50%) rotate(45deg);
+}
+.sun li:nth-child(4) {
+  transform: translate(-15%, -50%) rotate(-50deg);
+}
+.sun li:nth-child(5) {
+  transform: translate(-15%, -50%) rotate(200deg);
+}
+.sun li:nth-child(6) {
+  transform: translate(-15%, -50%) rotate(156deg);
+}
+.sun li:nth-child(7) {
+  transform: translate(-15%, -50%) rotate(70deg);
+}
+.sun li:nth-child(8) {
+  transform: translate(-15%, -50%) rotate(-70deg);
+}
 @keyframes animate {
   from {
     background-position: 0 0;
@@ -49,5 +135,27 @@ body {
   }
   to {
     margin-right: 1030px;
+  }
+}
+@keyframes sun-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cloud-animate {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0px);
   }
 }
